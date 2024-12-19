@@ -1,0 +1,251 @@
+.background-1 {
+    background-image: url('/fondo1.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed; /* Cambiado de absolute a fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75vh;
+    background-size:auto 90% ; /* Cambiado de contain a cover */
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.background-2 { 
+    background-image: url('/fondo2.jpg'); 
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed; /* Cambiado de absolute a fixed */
+    top: 0;
+    left: 0;
+    width: 95%;
+    height: 75vh;
+    background-size:auto 90% ; /* Cambiado de contain a cover */
+    background-position: center;
+    background-repeat: no-repeat;
+   
+}
+
+.background-3 { 
+    background-image: url('/fondo3.jpg');  
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed; /* Cambiado de absolute a fixed */
+    top: 0;
+    left: 0;
+    width: 95%;
+    height: 75vh;
+    background-size:auto 90% ; 
+    background-position: center;
+    background-repeat: no-repeat;
+   
+}
+
+.background-4 { 
+    background-image: url('/fondo4.jpg');  
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75vh;
+    background-size:auto 90% ; 
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.background-1, .background-2, .background-3, .background-4 {
+    position: fixed;
+    top: 0; /* Cambiado de bottom a top */
+    left: 0;
+    width: 100%;
+    height: 100%; /* Usar altura completa */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1; /* Asegurar que esté detrás del contenido */
+}
+
+
+.app-container {
+    min-height: 100vh; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    overflow: hidden; 
+    background-color: #fff9c4; 
+    padding-top: 5rem;
+    z-index: 2;
+}
+
+
+.content-wrapper {
+    width: 100%;
+    max-width: 412px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    margin-top: 5rem;
+    z-index: 3;
+}
+
+
+/* Título */
+.fortune-title-container {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.fortune-title {
+    color: #FF8C00;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    white-space: nowrap;
+    position: relative;
+    z-index: 3; 
+    margin: 0; /* Quita el margen entre las líneas */
+    line-height: 0.5; /* Ajusta el espacio entre líneas */
+}
+
+/* Botón */
+.fortune-button {
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 3;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.fortune-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.1);
+}
+
+.fortune-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Tarjeta de fortuna */
+.fortune-card {
+    background: white;
+    padding: 1.8rem 2rem;
+    border-radius: 25px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    /* Agregar borde ondulado */
+    clip-path: path('M 0,20 C 10,10 20,0 30,0 H 100% L 100%,100% H 0 Z');
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1)
+}
+
+.fortune-card::after {
+    content: '"';
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+    font-size: 4rem;
+    color: #ccc;
+    font-family: serif;
+    transform: rotate(10deg);
+}
+
+.fortune-phrase {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.fortune-author {
+    font-style: italic;
+    color: #888;
+    font-size: 0.9rem;
+    text-align: right;
+    margin-top: 1rem;
+}
+
+/* Media Queries */
+@media screen and (max-width: 480px) {
+    .background-1, .background-2, .background-3, .background-4 {
+        background-size: auto 100%;
+        background-position: center;
+    }
+
+    .app-container {
+        padding-top: 3rem;
+    }
+}
+
+/* Samsung Galaxy S20 Ultra */
+@media screen and (max-width: 412px) and (min-height: 915px) {
+    .background-1, .background-2, .background-3, .background-4 {
+        background-size: cover;
+    }
+}
+
+/* iPad Mini */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .app-container {
+        padding-top: 4rem;
+    }
+
+    .content-wrapper {
+        width: 80%;
+        max-width: 700px;
+        gap: 2.5rem;
+    }
+
+    .fortune-title {
+        font-size: 2.2rem;
+    }
+
+    .fortune-card {
+        width: 90%;
+        padding: 2rem;
+    }
+
+    .fortune-phrase {
+        font-size: 1.3rem;
+        line-height: 1.6;
+    }
+
+    .fortune-author {
+        font-size: 1.1rem;
+    }
+
+    .fortune-button {
+        padding: 1rem 3rem;
+        font-size: 1.2rem;
+    }
+
+    .background-1, .background-2, .background-3, .background-4 {
+        background-size: 80% auto;
+    }
+}
