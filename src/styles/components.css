@@ -3,12 +3,12 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    position: fixed; /* Cambiado de absolute a fixed */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
     height: 75vh;
-    background-size:auto 90% ; /* Cambiado de contain a cover */
+    background-size:auto 90% ; 
     background-position: center;
     background-repeat: no-repeat;
     
@@ -19,12 +19,12 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    position: fixed; /* Cambiado de absolute a fixed */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 95%;
     height: 75vh;
-    background-size:auto 90% ; /* Cambiado de contain a cover */
+    background-size:auto 90% ; 
     background-position: center;
     background-repeat: no-repeat;
    
@@ -35,7 +35,7 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    position: fixed; /* Cambiado de absolute a fixed */
+    position: fixed;
     top: 0;
     left: 0;
     width: 95%;
@@ -64,14 +64,14 @@
 
 .background-1, .background-2, .background-3, .background-4 {
     position: fixed;
-    top: 0; /* Cambiado de bottom a top */
+    top: 0; 
     left: 0;
     width: 100%;
-    height: 100%; /* Usar altura completa */
+    height: 100%; 
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: 1; /* Asegurar que esté detrás del contenido */
+    z-index: 1; 
 }
 
 
@@ -120,11 +120,11 @@
     white-space: nowrap;
     position: relative;
     z-index: 3; 
-    margin: 0; /* Quita el margen entre las líneas */
-    line-height: 0.5; /* Ajusta el espacio entre líneas */
+    margin: 0; 
+    line-height: 0.5; 
 }
 
-/* Botón */
+
 .fortune-button {
     color: rgb(0, 0, 0);
     border: none;
@@ -151,7 +151,6 @@
 }
 
 
-/* Tarjeta de fortuna */
 .fortune-card {
     background: white;
     padding: 1.8rem 2rem;
@@ -159,8 +158,7 @@
     width: 90%;
     text-align: center;
     position: relative;
-    z-index: 3;
-    /* Agregar borde ondulado */
+    z-index: 3;    
     clip-path: path('M 0,20 C 10,10 20,0 30,0 H 100% L 100%,100% H 0 Z');
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1)
 }
@@ -191,7 +189,7 @@
     margin-top: 1rem;
 }
 
-/* Media Queries */
+
 @media screen and (max-width: 480px) {
     .background-1, .background-2, .background-3, .background-4 {
         background-size: auto 100%;
@@ -203,14 +201,14 @@
     }
 }
 
-/* Samsung Galaxy S20 Ultra */
+
 @media screen and (max-width: 412px) and (min-height: 915px) {
     .background-1, .background-2, .background-3, .background-4 {
         background-size: cover;
     }
 }
 
-/* iPad Mini */
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .app-container {
         padding-top: 4rem;
