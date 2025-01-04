@@ -10,11 +10,11 @@ function App() {
   const [currentButtonColor, setCurrentButtonColor] = useState(0)
 
   const buttonColors = [
-    '#FF9F43', // naranja
-    '#4ECDC4', // turquesa
-    '#FF6B6B', // coral
-    '#A8E6CF', // verde menta
-    '#FFD93D', // amarillo
+    '#FF9F43', 
+    '#4ECDC4', 
+    '#FF6B6B'
+    '#A8E6CF', 
+    '#FFD93D',
   ]
 
   const backgroundImages = [1, 2, 3, 4]
